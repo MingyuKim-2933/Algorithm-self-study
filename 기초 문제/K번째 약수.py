@@ -21,3 +21,16 @@ K번째 약수가 존재하지 않을 경우에는 -1을 출력하시오.
 ▣ 출력예제
 3
 '''
+
+count = 0
+N, K = map(int, input().split())
+
+for x in range(1, N+1):
+    if N % x == 0:
+
+        count += 1
+    if count == K:
+        print(x)
+        break
+else:
+    print(-1)
