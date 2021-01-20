@@ -38,8 +38,8 @@ r.shuffle(a)  # random을 import 하였을 때 shuffle()을 사용하면 list �
 print(a)
 a.sort()  # sort() : 인자 값들을 오름차순으로 정렬하여 반환한다.
 print(a)
-a.sort(reverse=True)
-print(a)  # sort(reverse=True) : 인자 값들을 내림차순으로 정렬하여 반환한다.(True대신 1을 써도 된다.)
+a.sort(reverse=True)  # sort(reverse=True) : 인자 값들을 내림차순으로 정렬하여 반환한다.(True대신 1을 써도 된다.)
+print(a)
 
 a.clear()  # list안의 모든 값을 삭제하여 빈 리스트를 반환한다.
 print(a)
