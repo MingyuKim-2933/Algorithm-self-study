@@ -20,37 +20,27 @@ N명의 학생 중 평균에 가장 가까운 학생은 몇 번째 학생인지 
 N = int(input())
 score = list(map(int, input().split()))
 avg = sum(score) / N
-print(avg)
 avg_check = avg % 1
 if 0.5 <= avg_check < 1:
     avg = avg + 1
 avg = int(avg)
-print(avg)
-
 compare = []
 num = []
+
 for i in range(N):
     if avg-score[i] >= 0:
         compare.append(avg - score[i])
     else:
         compare.append(score[i] - avg)
-print(compare)
 
-compare_min = min(compare)
-print(compare_min)
-for i in range(N):
-    for j in range(i+1, N):
-        if compare[i] == compare[j] and compare_min == compare[i]:
-            num.append(i)
-            num.append(j)
-set = set(num)
-num = list(set)
-num.sort()
-# num = list(map(lambda x: x+1, num))
-print(num)
-for i in range(len(num)):
-    for j in range(i+1, len(num)):
-        if score[i] > score[j]:
-            temp = i
+min = 100
 
-
+for i in range(len(compare)):
+    if min == compare[i]:
+        if score[i] > score[out]:
+            out = i
+    if min > compare[i]:
+        min = compare[i]
+        out = i
+out = out + 1
+print(avg, out)
