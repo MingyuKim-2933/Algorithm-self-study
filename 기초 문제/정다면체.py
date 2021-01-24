@@ -13,7 +13,6 @@
 '''
 
 N, M = map(int, input().split())
-num_sum=[]
 count=[]
 for i in range(N*M):
     count.append(0)
@@ -23,3 +22,18 @@ for i in range(1, N+1):
 for i in range(len(count)):
     if count[i] == max(count):
         print(i, end=' ')
+
+'''
+N, M = map(int, input().split())
+count = [0] * (n+m+3)  # n+m = 합의 최댓값 - for문보다 효율적
+max =-21470000
+for i in range(1, N+1):
+    for j in range(1, M+1):
+        count[i+j] += 1
+for i in range(n+m+1):
+    if count[i] > max:
+        max=count[i]
+for i in range(n+m+1):
+    if count[i] == max:
+        print(i, end=' ')
+'''
