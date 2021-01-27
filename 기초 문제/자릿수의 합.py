@@ -15,25 +15,22 @@ N개의 자연수가 입력되면 각 자연수의 자릿수의 합을 구하고
 '''
 
 N = int(input())
-num = list(map(int, input().split()))
+num = list(map(int, input().split()))  # 띄어쓰기로 구분된 입력을 각각 list에 추가한다.
 
 
 def digit_sum():
 
     digit_sum = []
     temp1 = [0] * 8
-    temp2 = 0
     for i in range(len(num)):
+        temp2 = 0
         for j in range(8):
-            temp1[j] = num[i] % (10 ** (j + 1))
-
-            if temp1[j] == temp1[j-1]:
+            if int(num[i] / (10 ** (j + 1))) == int(num[i] / (10 ** j)):
                 break
-            else:
-                temp2 += int(temp1[j] / (10 ** j))  # 반올림 해줘야 자릿수가 나온다.
+            temp1[j] = num[i] % (10 ** (j + 1))
+            temp2 += int(temp1[j] / (10 ** j))  # 반올림 해줘야 자릿수가 나온다.
         digit_sum.append(temp2)
-    print(digit_sum)
-    return digit_sum.index(max(digit_sum))
+    return digit_sum.index(max(digit_sum))  # 인자로 받는 값의 인덱스를 반환한다.
 
 
 print(num[digit_sum()])
