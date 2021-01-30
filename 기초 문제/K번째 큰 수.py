@@ -17,6 +17,7 @@
 143
 '''
 
+# My solution
 N, K = map(int, input().split())
 num = list(map(int, input().split())) # 띄어쓰기로 구분된 값을 list로 입력받는다.
 num.sort(reverse=True)
@@ -30,3 +31,15 @@ set = set(num_sum)  # set을 사용하여 중복을 제거하였다.
 num_sum = list(set)  # 만약 sort가 되어있는 상태여도 set함수를 사용하면 순서가 뒤죽박죽 되어 다시 sort 해주어야 한다.
 num_sum.sort(reverse=True)
 print(num_sum[K-1])
+
+# solution
+# N, K = map(int, input().split())
+# num = list(map(int, input().split())) # 띄어쓰기로 구분된 값을 list로 입력받는다.
+# res = set()
+# for i in range(N):
+#     for j in range(i+1, N):
+#         for m in range(j+1, N):
+#             res.add(num[i]+num[j]+num[m])
+# res = list(res)
+# res.sort(reverse=True)
+# print(res[K-1])

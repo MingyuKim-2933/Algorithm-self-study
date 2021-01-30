@@ -24,27 +24,28 @@
 #         count += 1
 # print(count)  # 답은 맞지만 Time Limit Exceeded
 
-# 에라토스테네스 체 방법 사용
-# N = int(input())
-# count = 0
-# temp = [1]+[0]*N
-# for i in range(2, N+1):
-#     if temp[i] == 0:
-#         count += 1
-#         for j in range(1, N):
-#             if i*j > N:
-#                 break
-#             temp[i*j] = 1
-# print(count)
 
-# Best Solution
+# My solution
 N = int(input())
 count = 0
-temp = [0]*(N+1)
+temp = [1]+[0]*N
 for i in range(2, N+1):
     if temp[i] == 0:
         count += 1
-        for j in range(i, N+1, i):
-            temp[j] = 1
+        for j in range(1, N):
+            if i*j > N:
+                break
+            temp[i*j] = 1
 print(count)
+
+# Solution
+# N = int(input())
+# count = 0
+# temp = [0]*(N+1)
+# for i in range(2, N+1):
+#     if temp[i] == 0:
+#         count += 1
+#         for j in range(i, N+1, i):
+#             temp[j] = 1
+# print(count)
 
