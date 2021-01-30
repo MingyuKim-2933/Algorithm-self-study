@@ -11,13 +11,20 @@
 ▣ 출력예제 1
 8
 '''
-count = 0
+
+# count = 0
+# N = int(input())
+# for i in range(1, N+1):
+#     divide = 0
+#     for j in range(2, i+1):
+#         if i % j == 0:
+#             divide += 1
+#     if divide == 1:
+#         count += 1
+# print(count)  # 답은 맞지만 Time Limit Exceeded
+
+#에라토스테네스 체 방법 사용
 N = int(input())
-for i in range(1, N+1):
-    divide = 0
-    for j in range(2, i+1):
-        if i % j == 0:
-            divide += 1
-    if divide == 1:
-        count += 1
-print(count)  # 답은 맞지만 Time Limit Exceeded
+temp = [0]*N
+for i in range(2, N+1):
+    if temp[0]
