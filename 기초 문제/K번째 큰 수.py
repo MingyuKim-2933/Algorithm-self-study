@@ -18,7 +18,7 @@
 '''
 
 N, K = map(int, input().split())
-num = list(map(int, input().split()))
+num = list(map(int, input().split())) # 띄어쓰기로 구분된 값을 list로 입력받는다.
 num.sort(reverse=True)
 num_sum = []
 
