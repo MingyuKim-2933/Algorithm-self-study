@@ -1,4 +1,4 @@
-# CodingTest self study
+# Algorithm self study
 
 사용언어 : ```python```
 
