@@ -51,7 +51,7 @@ print(Point())
 p = Point(10, 20)
 print(p)
 
-# i, j = p  # error가 발생한다.
+# i, j = p  # error .
 
 print(p.x, p.y)
 
