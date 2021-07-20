@@ -13,9 +13,9 @@ b aa baa → bb aa → aa →
 
 입출력 예
 
-s	        result
+s	      result
 baabaa	  1
-cdcd	    0
+cdcd	  0
 
 입출력 예 설명
 
