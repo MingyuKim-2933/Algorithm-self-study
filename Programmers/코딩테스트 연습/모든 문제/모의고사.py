@@ -37,7 +37,6 @@ def solution(answers):
     p2 = [2,1,2,3,2,4,2,5] * ((len(answers) // 8) + 1)
     p3 = [3,3,1,1,2,2,4,4,5,5] * ((len(answers) // 10) + 1)
     
-    
     count1 = [1, 0]
     count2 = [2, 0]
     count3 = [3, 0]
@@ -49,13 +48,14 @@ def solution(answers):
             count2[1] += 1
         if answers[i] == p3[i]:
             count3[1] += 1
+            
     count_list = [count1, count2, count3]
-    print(count_list)
     count_list.sort(reverse=True, key=lambda x:x[1])
-    
     answer.append(count_list[0][0])
+    
     if count_list[0][1] == count_list[1][1]:
         answer.append(count_list[1][0])
         if count_list[1][1] == count_list[2][1]:
             answer.append(count_list[2][0])
+
     return answer
