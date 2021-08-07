@@ -11,8 +11,8 @@
 W, H : 1억 이하의 자연수
 
 입출력 예
-W	  H	    result
-8	  12	  80
+W   H   result
+8	12	80
 
 입출력 예 설명
 
@@ -27,5 +27,4 @@ def solution(w,h):
     
     answer = w * h - rec
         
-    
     return answer
