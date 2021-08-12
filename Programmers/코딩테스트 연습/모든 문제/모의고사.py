@@ -31,6 +31,7 @@ answers	          return
 입출력 예 #2
 모든 사람이 2문제씩을 맞췄습니다.
 '''
+
 def solution(answers):
     answer = []
     p1 = [1,2,3,4,5] * ((len(answers) // 5) + 1)
