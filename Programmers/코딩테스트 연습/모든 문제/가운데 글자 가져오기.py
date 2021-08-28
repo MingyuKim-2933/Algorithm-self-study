@@ -21,5 +21,4 @@ def solution(s):
         idx = length // 2
         answer += s[idx]
     
-    
     return answer
