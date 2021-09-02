@@ -49,5 +49,4 @@ def solution(board, moves):
                         basket.pop()
                 break
     
-
     return answer
