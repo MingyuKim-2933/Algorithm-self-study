@@ -65,6 +65,7 @@ result
 
 입출력 예 #1
 문제의 설명과 같다.
+
 '''
 def solution(record):
     answer = []
