@@ -12,4 +12,8 @@ arr1	          arr2	          return
 [[1],[2]]	  [[3],[4]]	  [[4],[6]]
 '''
 
-def solution():
+def solution(arr1, arr2):
+    answer = []
+    for i, j in arr1, arr2:
+        answer.append(i+j)
+    return answer
