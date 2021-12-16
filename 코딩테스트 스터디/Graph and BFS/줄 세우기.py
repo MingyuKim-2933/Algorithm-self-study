@@ -4,7 +4,6 @@ from collections import deque
 n, m = map(int, sys.stdin.readline().split())
 arr = []
 inDegree = [0] * (n+1)
-inDegree[0] = -1
 graph = [[] for i in range(n+1)]
 queue = deque()
 
