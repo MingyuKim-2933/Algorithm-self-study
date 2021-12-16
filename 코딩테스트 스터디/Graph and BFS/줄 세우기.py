@@ -1,25 +1,29 @@
 import sys
 from collections import deque
+
 n, m = map(int, sys.stdin.readline().split())
+arr = []
 inDegree = [0] * (n+1)
 inDegree[0] = -1
-direct = [[] for _ in range(n+1)]
+graph = [[] for i in range(n+1)]
 queue = deque()
 
-for _ in range(m):
-    a, b = map(int, sys.stdin.readline().split())
+for i in range(m):
+    a, b = map(int, input().split())
+    arr.append([a, b])
+
+for a, b in arr:
     inDegree[b] += 1
-    direct[a].append(b)
+    graph[a].append(b)
 
 for i in range(1, n+1):
     if inDegree[i] == 0:
         queue.append(i)
 
 while queue:
-    q = q.popleft()
-
-    print(q, end=' ')
-    for d in direct[q]:
-        inDegree[d] -= 1
-        if inDegree[d] == 0:
-            queue.append(d)
+    student = queue.popleft()
+    for j in graph[student]:
+        inDegree[j] -= 1
+        if inDegree[j] == 0:
+            queue.append(j)
+    print(student, end=' ')
