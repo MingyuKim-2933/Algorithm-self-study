@@ -2,7 +2,6 @@ import sys
 from collections import deque
 n = int(sys.stdin.readline())
 
-queue = deque()
 dist = [0] * (n+1)
 
 for i in range(2, n+1):
