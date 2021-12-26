@@ -34,7 +34,7 @@ import collections
 def solution(participant, completion):
     temp = collections.Counter(participant) - collections.Counter(completion)
     answer = list(temp)[0]
-    print(answer)
+    
     return answer
   
   
