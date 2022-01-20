@@ -26,16 +26,22 @@ tickets	                                                                        
 ["ICN", "SFO", "ATL", "ICN", "ATL", "SFO"] 순으로 방문할 수도 있지만 ["ICN", "ATL", "ICN", "SFO", "ATL", "SFO"] 가 알파벳 순으로 앞섭니다.
 '''
 
-# 테스트 1, 2에서 오류 발생 dfs 풀이로 바꿔서 해결 필요..
+# 테스트 1에서 오류 발생 dfs 풀이로 바꿔서 해결 필요..
 
 def bfs(tickets, visited, answer):
     stack = []
-
+    check = False
     for i in range(len(tickets)):
         if tickets[i][0] == "ICN":
-            visited[i] = True
-            stack.append(tickets[i])
-            break
+            for j in range(len(tickets)):
+                if tickets[i][1] == tickets[j][0]:
+                    check = True
+                    if check:                
+                        visited[i] = True
+                        stack.append(tickets[i])
+                        break
+                if check:
+                    break
             
     while stack:
         depart, arrival = stack.pop()
@@ -46,12 +52,12 @@ def bfs(tickets, visited, answer):
                 for j in range(len(tickets)):
                     if arrival == tickets[j][0] and visited[j] == False:
                         check = True
-                        if check:
-                            stack.append(tickets[i])
-                            visited[i] = True
-                            break
-            if check:
-                break
+                    if check:
+                        stack.append(tickets[i])
+                        visited[i] = True
+                        break
+                if check:
+                    break
     return answer
                 
                          
