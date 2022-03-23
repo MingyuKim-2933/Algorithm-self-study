@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
 
-t = int(input())
+n = int(input())
 
-for i in range(t):
+for i in range(n):
     sentence = list(map(str, input().split()))
     for i in sentence:
         for j in range(len(i)-1, -1, -1):
