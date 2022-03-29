@@ -74,7 +74,3 @@ def isPrime(x):
 
 for i in range(len(num)):
     isPrime(reverse(num[i]))
-
-
-
-
