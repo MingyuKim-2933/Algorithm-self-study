@@ -12,6 +12,6 @@ def solution(triangle):
                         triangle[i][j] = v2 + triangle[i-1][j-1]
                     else:
                         triangle[i][j] = v2 + triangle[i-1][j]
-    print(triangle)
+                        
     answer = max(triangle[-1])
     return answer
