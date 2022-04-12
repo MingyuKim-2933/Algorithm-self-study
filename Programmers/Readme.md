@@ -1,3 +1,3 @@
 ## Pregrammers
 
-Programmers 코딩테스트 연습
+Programmers 코딩 테스트
