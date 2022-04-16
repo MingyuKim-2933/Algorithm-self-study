@@ -10,3 +10,4 @@ for i in nums:
     for j in i:
         print(j, end=' ')
     print()
+
