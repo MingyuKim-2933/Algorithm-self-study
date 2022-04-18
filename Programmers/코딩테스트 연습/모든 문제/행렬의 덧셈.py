@@ -13,7 +13,8 @@ arr1	          arr2	          return
 '''
 
 def solution(arr1, arr2):
-    answer = []
-    for i, j in arr1, arr2:
-        answer.append(i+j)
-    return answer
+    for i in range(len(arr1)):
+        for j in range(len(arr1[0])):
+            arr1[i][j] += arr2[i][j]
+            
+    return arr1
