@@ -24,4 +24,3 @@ print(a, b, c, sep='\n')
 # print(a, ) # end를 사용하면 print()를 해도 줄 바꿈을 하지 않고 변수 뒤에 end에 대입되는 것이 출력됨
 # print(b, end=' 'end=' ')
 # print(c)
-
