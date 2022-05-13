@@ -38,9 +38,9 @@ def get_lcm(a, b):
 import math
 
 # a, b는 임의의 두 자연수
-
 #math.gcd는 파이썬 3.5 버전 이상일 때 사용가능
 math.gcd(a, b)
 
 #math.lcm은 파이썬 3.9 버전 이상일 때 사용가능
 math.lcm(a, b)
+
