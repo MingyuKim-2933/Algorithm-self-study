@@ -28,3 +28,4 @@ def solution(strings, n):
     answer = []
     strings.sort(key=lambda x: (x[n], x))  # 튜플로 주면 차례대로 정렬을 진행한다.
     return strings
+
