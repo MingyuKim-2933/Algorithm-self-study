@@ -22,4 +22,3 @@ def solution(a, b):
     for i in range(a, b+1):
         answer += i
     return answer
-
