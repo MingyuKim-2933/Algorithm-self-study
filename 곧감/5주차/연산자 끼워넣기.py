@@ -6,8 +6,8 @@ li = list(map(int, sys.stdin.readline().split()))
 
 plus, minus, multi ,divide = map(int, sys.stdin.readline().split())
 
-maximum = -10000000000
-minimum = 10000000000
+maximum = -1e+8
+minimum = 1e+8
 
 
 def dfs(depth, total, plus, minus, multi, divide):
