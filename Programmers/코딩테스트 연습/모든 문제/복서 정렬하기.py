@@ -82,3 +82,4 @@ def solution(weights, head2head):
     answer = [i[0] for i in result]
 
     return answer
+
