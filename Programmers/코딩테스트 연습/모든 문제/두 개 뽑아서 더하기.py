@@ -39,4 +39,3 @@ def solution(numbers):
     answer = list(set(answer))
     answer.sort()
     return answer
-
