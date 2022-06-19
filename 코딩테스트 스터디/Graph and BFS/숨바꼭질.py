@@ -4,6 +4,7 @@ n, k = map(int, input().split())
 q = deque()
 q.append(n)
 dist = [0] * 100001
+
 while q:
     x = q.popleft()
     if x == k:
