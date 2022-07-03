@@ -28,7 +28,7 @@ def solution(a, b):
         
     return answer[key]
   
-# datetime을 사용한 풀이 방법
+# datetime을 사용한 풀이
 import datetime
 
 def getDayName(a,b):
